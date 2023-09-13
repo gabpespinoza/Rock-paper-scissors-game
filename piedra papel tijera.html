@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title> Juego Piedra, papel, Tijera</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <script defer src="/sript.js"> </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="animate-title">Juego Piedra Papel Tijera</h1>
+        <div class="game-container">
+            <div class="player-container">
+                <h2>Tu elección:</h2>
+                <div class="hand" id="hand-rock">
+                    <img src="img/rock.png" alt="Rock">
+                    <span class="caption">Piedra</span>
+                </div>
+                <div class="hand" id="hand-paper">
+                    <img src="img/paper.png" alt="Paper">
+                    <span class="caption">Papel</span>
+                </div>
+                <div class="hand" id="hand-scissors">
+                    <img src="img/scissors.png" alt="Scissors">
+                    <span class="caption">Tijera</span>
+                </div>
+            </div>
+            <div class="computer-container">
+                <h2>Opción de la PC:</h2>
+                <div class="slot-machine" id="slot-machine">
+                    <div class="slot">
+                        <img src="img/rock.png" alt="Rock">
+                    </div>
+                    <div class="slot">
+                        <img src="img/paper.png" alt="Paper">
+                    </div>
+                    <div class="slot">
+                        <img src="img/scissors.png" alt="Scissors">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="combat-container">
+            <div id="player-message" class="message"></div>
+            <div id="result-message" class="message"></div>
+            <div id="computer-message" class="message"></div>
+        </div>
+    </div>
+</body>
+
+</html>
