@@ -21,31 +21,31 @@ hands.forEach(hand => {
 
 //funciones
 function getComputerHand() {
-    const hands = ['rock', 'paper', 'scissors'];
+    const hands = ['Piedra', 'Papel', 'Tijeras'];
     const randomIndex = Math.floor(Math.random() * hands.length);
     return hands[randomIndex];
 }
 function getComputerHand() {
-    const hands = ['rock', 'paper', 'scissors'];
+    const hands = ['Piedra', 'Papel', 'Tijeras'];
     const randomIndex = Math.floor(Math.random() * hands.length);
     const handChosen = hands[randomIndex]
-    if (handChosen === 'rock') {computerImage.src = 'img/rock.png'}
-    if (handChosen === 'paper'){computerImage.src = 'img/paper.png'}
-    if (handChosen === 'scissors') {computerImage.src = 'img/scissors.png'}
+    if (handChosen === 'Piedra') {computerImage.src = 'img/rock.png'}
+    if (handChosen === 'Papel'){computerImage.src = 'img/Papel.png'}
+    if (handChosen === 'Tijeras') {computerImage.src = 'img/scissors.png'}
     return handChosen;
 }
 
 function playGame(playerHand, computerHand) {
     if (playerHand === computerHand) {
-        return 'Empate';
+        return 'Es un empate';
     } else if (
-        (playerHand === 'rock' && computerHand === 'scissors') ||
-        (playerHand === 'paper' && computerHand === 'rock') ||
-        (playerHand === 'scissors' && computerHand === 'paper')
+        (playerHand === 'Piedra' && computerHand === 'Tijeras') ||
+        (playerHand === 'Papel' && computerHand === 'Piedra') ||
+        (playerHand === 'Tijeras' && computerHand === 'Papel')
     ) {
         return '¡Ganaste!';
     } else {
-        return '¡Perdiste!';
+        return '¡Perdiste, pero inténtalo otra vez!';
     }
 }
 

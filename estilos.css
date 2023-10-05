@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f0f0;
+    background-color: white;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 h1 {
@@ -33,7 +33,7 @@ h1 {
 .game-container {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .player-container,
@@ -73,44 +73,28 @@ h1 {
 
 .slot-machine {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 200px;
-    border: 2px solid #333;
+    justify-content: center;
+    text-align: center;
     margin-top: 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.slot {
-    position: absolute;
-    top: 0;
-    left: 0;
+  }
+  
+  .slot-machine img {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+    height: auto;
+  }
 
 .message {
     margin: 10px;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .hand:hover .caption {
     opacity: 1;
 }
 
-.combat-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
 .message {
-    margin: 10px;
-    font-size: 18px;
+    margin: 5px;
+    font-size: 3em;
 }
