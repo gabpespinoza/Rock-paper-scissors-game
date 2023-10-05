@@ -3,6 +3,7 @@ let playerMessage = document.getElementById('player-message');
 let computerMessage = document.getElementById('computer-message');
 let resultMessage = document.getElementById('result-message');
 let slotMachine = document.getElementById('slot-machine');
+let computerImage = document.getElementById("computerImage")
 
 //listener
 hands.forEach(hand => {
@@ -27,7 +28,11 @@ function getComputerHand() {
 function getComputerHand() {
     const hands = ['rock', 'paper', 'scissors'];
     const randomIndex = Math.floor(Math.random() * hands.length);
-    return hands[randomIndex];
+    const handChosen = hands[randomIndex]
+    if (handChosen === 'rock') {computerImage.src = 'img/rock.png'}
+    if (handChosen === 'paper'){computerImage.src = 'img/paper.png'}
+    if (handChosen === 'scissors') {computerImage.src = 'img/scissors.png'}
+    return handChosen;
 }
 
 function playGame(playerHand, computerHand) {
@@ -44,29 +49,7 @@ function playGame(playerHand, computerHand) {
     }
 }
 
-function animateSlotMachine(computerHand, callback) {
-    const slots = Array.from(slotMachine.getElementsByClassName('slot'));
-    const slotImgs = slots.map(slot => slot.querySelector('img'));
-    const slotValues = ['rock', 'paper', 'scissors'];
-    const totalFrames = 30;
-    const animationDuration = 4000; // milliseconds
 
-    let currentFrame = 0;
-    let currentIndex = 0;
-    let targetIndex = slotValues.indexOf(computerHand);
-
-    const spinInterval = setInterval(() => {
-        slotImgs[currentIndex].style.opacity = 0;
-        currentIndex = (currentIndex + 1) % slots.length;
-        slotImgs[currentIndex].style.opacity = 1;
-
-        currentFrame++;
-        if (currentFrame === totalFrames) {
-            clearInterval(spinInterval);
-            callback();
-        }
-    }, animationDuration / totalFrames);
-}
 
 /*if (jugador == 1) {
     alert("Elegiste 💎")
