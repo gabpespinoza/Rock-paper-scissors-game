@@ -1,9 +1,10 @@
 body {
-    background-color: white;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
 }
 
 .container {
@@ -20,6 +21,13 @@ h1 {
     animation: animateTitle 2s linear;
 }
 
+.animate-title {
+    background-color: #333;
+    width: 100%;
+    padding: 0.7em;
+    color: aliceblue;
+}
+
 @keyframes animateTitle {
     0% {
         transform: translateX(-100%);
@@ -34,11 +42,13 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+
 }
 
 .player-container,
 .computer-container {
-    width: 50%;
+    width: 30%;
+    height: 30%;
 }
 
 .hand {
@@ -52,7 +62,9 @@ h1 {
 .hand img {
     width: 150px;
     height: 150px;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
+    border: 2px dashed;
+    border-color: rgb(54, 54, 54);
 }
 
 .hand .caption {
@@ -64,7 +76,7 @@ h1 {
 }
 
 .hand:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .hand:hover .caption {
@@ -78,12 +90,12 @@ h1 {
     justify-content: center;
     text-align: center;
     margin-top: 30px;
-  }
-  
-  .slot-machine img {
+}
+
+.slot-machine img {
     width: 100%;
     height: auto;
-  }
+}
 
 .message {
     margin: 10px;
@@ -96,5 +108,13 @@ h1 {
 
 .message {
     margin: 5px;
-    font-size: 3em;
+    font-size: 1.5em;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }

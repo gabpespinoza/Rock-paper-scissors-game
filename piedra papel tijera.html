@@ -9,8 +9,13 @@
 
 <body>
     <div class="container">
-        <h1 class="animate-title">Es hora de jugar: Piedra Papel Tijera</h1>
+        <h1 class="animate-title">Es hora de jugar: Piedra, Papel, Tijera</h1>
         <h2> Vamos, ¡Tú comienzas! </h2>
+        <div class="combat-container">
+            <div id="result-message" class="message"></div>
+            <div id="player-message" class="message"></div>
+            <div id="computer-message" class="message"></div>
+        </div>
         <div class="game-container">
             <div class="player-container">
                 <h2>Tu elección:</h2>
@@ -29,18 +34,16 @@
             </div>
             <div class="computer-container">
                 <h2>Opción de la PC:</h2>
-                <div class="slot-machine" id="slot-machine">
-                        <img id ="computerImage" src=""/>
-                        
+                <div class="slot-machine" id="slot-machine" class="hand">
+                    <img id="computerImage" src="" />
+
                 </div>
             </div>
         </div>
-        <div class="combat-container">
-            <div id="result-message" class="message"></div>
-            <div id="player-message" class="message"></div>
-            <div id="computer-message" class="message"></div>
-        </div>
     </div>
+    <footer>
+        <p>&copy; 2023 Patricia - Todos los derechos reservados</p>
+    </footer>
 </body>
 
 </html>

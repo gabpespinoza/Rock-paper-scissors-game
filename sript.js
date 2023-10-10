@@ -38,7 +38,7 @@ function getComputerHand() {
 function playGame(playerHand, computerHand) {
     if (playerHand === computerHand) {
         return 'Es un empate';
-    } else if (
+    } if (
         (playerHand === 'Piedra' && computerHand === 'Tijeras') ||
         (playerHand === 'Papel' && computerHand === 'Piedra') ||
         (playerHand === 'Tijeras' && computerHand === 'Papel')
